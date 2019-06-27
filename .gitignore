@@ -2,6 +2,14 @@ bin/
 include/
 lib/
 pip-selfcheck.json
+activate
+activate*.*
+easy_install
+easy_install-3.6
+pip*
+python
+python-config
+python3.6
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

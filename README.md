@@ -177,9 +177,19 @@ settings.py파일을 열고 INSTALLED_APPS에 'posts'를 추가해
 ## 7/38 Models to Admin
 
 - 저번 시간에 모델 해봤는데 모델에는 필드타입 종류가 많아
-- 장고 공식 도큐먼트를 빠르게 보자
+- 장고 공식 도큐먼트를 빠르게 보고 레퍼런스를 정리해보자
 - CharField의 max_length는 유효한 글자 최대치를 말한다
+- max_length써서 무조건 최대 문자 길이 지정해야한다 없으면 에러발생한다
 - DateTimeField는 ','로 구분된 필드고 Date와 Time이 들어감
 
-
-
+admin.py를 열자
+저번에 만들었던 Post 모델을 import해
+from posts.models import Post로 적용할 수 있지만 같은 module내에 있으니까 .models라고 입력할 수도 있어
+저장하고 서버를 다시 열자(runserver)
+browser를 열고 127.0.0.1:8000/admin으로 들어가자
+post App하고 Post model을 확인할 수 있어
+Posts 선택하고 ADD POST + 버튼 누르고 db에 추가할 수 있어 
+Title에 Title이라 줘봐
+Title을 엄청나게 길게 시도해볼 수도 있지만 model생성할 때 최대 길이(max_length)120자 제한을 뒀기때문에 그 숫자 넘게는 불가능함
+추가한 post들을 지울 수도 있어
+다음시간에는 admin을 커스터마이즈 해볼

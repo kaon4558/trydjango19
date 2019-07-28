@@ -192,4 +192,17 @@ Posts 선택하고 ADD POST + 버튼 누르고 db에 추가할 수 있어
 Title에 Title이라 줘봐
 Title을 엄청나게 길게 시도해볼 수도 있지만 model생성할 때 최대 길이(max_length)120자 제한을 뒀기때문에 그 숫자 넘게는 불가능함
 추가한 post들을 지울 수도 있어
-다음시간에는 admin을 커스터마이즈 해볼
+다음시간에는 admin을 커스터마이즈 해볼께
+
+## 8/38 Customize Admin
+
+- 우린 이제django admin에  작은 커스터마이징을 할 수 있어
+- 우리가 검색할 수 있게 해주고 약간 다르게 보여
+- django 문서에서 model admin이라는 걸 살펴보자
+- model admin 옵션도 살펴봐
+
+일단 admin.py에 가서 model admin을 만들자
+PostAdmin이라는 클래스를 만들어 물론 Post 모델을 붙여서 사용하는 거야
+class Meta를 사용해서 Post모델을 사용해
+admin.site.register에 추가
+이젠 Post랑 PostAdmin이 같이 사용될 거

@@ -215,7 +215,7 @@ admin.site.register에 추가
 - 우리 프로젝트 안에 crud.md라는 새 파일을 만들거야
 - crud는 너의 앱이 DB와 작동하는 기본적인 방법이야
 - list와 search도 볼 수 있어
-- create는 뭔가를 만들 수 있고 retrieve는 가져올 수 있고 update는 수정할 수 있 delete는 지울 수 있어
+- create는 뭔가를 만들 수 있고 retrieve는 가져올 수 있고 update는 수정할 수 있고, delete는 지울 수 있어
 - 간단하지? 넌 이미 다 했었어
 - 무슨 뜻이냐면 너가 페북같은 어떤 어플리케이션을 쓰더라도 넌 이미 경험해봤을 거라는 뜻ㅎ
 - list랑 search는 retrieve랑 거의 흡사해 그래서 retrieve안에 넣는 게 나아.
@@ -254,5 +254,5 @@ admin.site.register에 추가
 - 난 h1 태그로 hello를 리턴할게
 - 이 기능을 wrap 해야한다
 - 그걸 하기 전에 우리가 이 posts_home을 wrap하는 것은 URL이다
-- request 파라미터를 추가해.
+- request 파라미터를 추가해
 - 매핑 URL 개념을 배우기 전에 다른 개념을 배우기 좋은 시간이다 멈추고 다음 시간에 봐

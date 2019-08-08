@@ -205,4 +205,54 @@ Title을 엄청나게 길게 시도해볼 수도 있지만 model생성할 때 �
 PostAdmin이라는 클래스를 만들어 물론 Post 모델을 붙여서 사용하는 거야
 class Meta를 사용해서 Post모델을 사용해
 admin.site.register에 추가
-이젠 Post랑 PostAdmin이 같이 사용될 거
+이젠 Post랑 PostAdmin이 같이 사용될 거야
+
+* * *
+## 9/38 CRUD
+
+- admin은 모델에게 정말 좋은 플레이스야(모델 클래스만 등록하면 조회/추가/수정/삭제 웹 인터페이스를 admin이 제공)
+- CRUD가 뭐냐면 Create Retrieve Update Delete를 말해
+- 우리 프로젝트 안에 crud.md라는 새 파일을 만들거야
+- crud는 너의 앱이 DB와 작동하는 기본적인 방법이야
+- list와 search도 볼 수 있어
+- create는 뭔가를 만들 수 있고 retrieve는 가져올 수 있고 update는 수정할 수 있 delete는 지울 수 있어
+- 간단하지? 넌 이미 다 했었어
+- 무슨 뜻이냐면 너가 페북같은 어떤 어플리케이션을 쓰더라도 넌 이미 경험해봤을 거라는 뜻ㅎ
+- list랑 search는 retrieve랑 거의 흡사해 그래서 retrieve안에 넣는 게 나아.
+- 이 개념은 django admin에서 엄청 잘 설명된단다
+- 만약 우리가 여기로 와서 새로운 post를 추가한다면 뭔가를 생성하는 방법이야
+- post를 누르고 바꾸면 이건 update야
+- delete버튼이 있고 이걸 누르면 지울 수 있어
+- 사이트를 구축하는 다 다른 방법들이야
+- 그리고 우리가 기본적으로 우리가 클릭할 때 update기도 하고 retrive이기도 해
+- HTTP에 비유한다면 CREATE는 POST, RETRIEVE는 GET, UPDATE는 PUT 혹은 PATCH, DELETE는 DELETE야
+- 그래서 이건 HTTP 메소드고 우리가 views에 들어갈 때 얘기할 거야
+- views는 우리에게 이 메소드들을 다루는 것을 허용해
+- 예를 들면 create view, retrieve view(detailed view같은), update view, delete view
+- create/update/delete와는 달리 retrieve는 권한이 필요없다
+- CRUD 위키피디아 찾아봐
+- READ는 RETRIEVE로 UPDATE는 MODIFY로 DELETE는 DESTROY로 설명 돼
+- 너가 하는 모든 프로젝트는 다 이 방법일거야
+
+
+* * *
+## 10/38 Writing our first View
+
+- 이제 우리가 CRUD의 개념에 대해 이해할 시간이야
+- 우리는 DB와 함께 작동하는 모델들을 가지고 있어
+- 우린 이제 우리가 원하는 방법으로 HTML 컨텐츠를 보여주는 우리의 뷰를 만들 수 있어
+- 우리가 List View라고 부르는 게 영상에 있어
+- item들의 리스트가 여기 있고 더 길게 만들 수도 있다
+- 우린 각 아이템들을 클릭하고 볼 수도 있고
+- 이건 우리가 가장 처음 해야하는 거야 왜냐하면 우린 이미 이것들을 DB에 가지고 있거든
+- 그래서 이 views.py안에 우리는 list view를 만들거야
+- function based views는 더 이해하기 쉬워 왜냐면 이건 단순한 파이썬 기능이거든 class based view에 비해
+- function based view를 완전히 마스터하고 class based view를 배우자
+- 펑션 베이스드 뷰는 엄청 쉽거든
+- 우리의 첫번째 펑션 베이스드 뷰를 만들어보자
+- HttpResponse를 import해
+- 난 h1 태그로 hello를 리턴할게
+- 이 기능을 wrap 해야한다
+- 그걸 하기 전에 우리가 이 posts_home을 wrap하는 것은 URL이다
+- request 파라미터를 추가해.
+- 매핑 URL 개념을 배우기 전에 다른 개념을 배우기 좋은 시간이다 멈추고 다음 시간에 봐

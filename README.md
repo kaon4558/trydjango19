@@ -256,3 +256,54 @@ admin.site.register에 추가
 - 그걸 하기 전에 우리가 이 posts_home을 wrap하는 것은 URL이다
 - request 파라미터를 추가해
 - 매핑 URL 개념을 배우기 전에 다른 개념을 배우기 좋은 시간이다 멈추고 다음 시간에 봐
+
+
+* * *
+## 11/38 Request & Response
+
+- view 작성을 끝내기 전에 우리는 request와 response의 사이클을 얘기할 거야
+- 언제든 너가 웹사이트에 가서 request와 response 사이클에서 뭔가를 할 때!
+- 비유하자면 너가 만약 다른 사람의 대문을 노크하고 똑똑똑 야 나 누구누구야라고 하는 걸 request라고 하고
+- 가령 다른 문에서 답변을 할 수도 있고 하지 않을 수도 있어
+- 너는 이미 이거랑 많이 일하고 있어
+- 이건 너가 반드시 어떻게 동작하는 건지 이해해야 하는 것이야
+- 내가 만약 링크를 클릭한다면 이건 request야
+- 어떤 링크를 클릭하든 다 다른 종류의 request이다
+- 난 몇몇의 request를 수행했고 우린 request결과물을 터미널에서 볼 수 있어
+- GET GET GET GET GET
+- 난 내가 했던 다 다른 request들을 볼 수 있고 admin을 갔거나 내가 갔던 URL들을 볼 수 있지
+- 내가 클릭하진 않았지만 웹페이지가 했던 request 결과물들도 볼 수 있지
+- 우리가 링크를 클릭하는 모든 순간마다 볼 수 있어
+- 내가 만약 not found 페이지를 간다면 보다시피 404 에러를 보여줄거야
+- 서버에게 무슨 일이 일어났는지 response를 줄거야
+- 나같은 유저가 뭔가를 한다면 서버는 결과물(response)을 돌려주지
+- 이 이미지같은 종류의 뭔가가 발생할 때 마다 말이야
+- 이 링크를 복사해서 가보면 이미지가 뜨지? 이 이미지를 받는 걸 시도했다는 거야
+- 모든 request와 response가 유저한테서만 일어나지 않는다는 거지
+- 우리는 우리의 views를 보면서 이 사이클을 이해해야해
+- 왜냐하면 요청을 한다면 여기에 있는 response를 리턴하니까
+- 만약 우리가 서버라면 이 views에 있는 request들을 다뤄서 response를 준다는 거지 겁나 많이
+- 어떤 형태의 HTTP request든 HTTP response로 돌려줘
+- request와 response를 하기전에 URL을 사용하는 방법을 알아야해
+- view가 이걸 다뤄
+- URL은 이걸 매핑하는 패턴이야 담에 봐
+
+
+* * *
+## 12/38 Mapping URLs to Views
+- 우린 이제 request를 보내는 곳에 URL 패턴을 만들 수 있어
+- 우린 posts를 위한 장소를 봐야해
+- urls.py를 열어서 admin을 복붙하고 posts로 바꿀 거야
+- URL을 쓰고 달러 표시를 붙여 
+- url(r'^posts/$', admin.site.urls)라서 admin으로 들어가
+- 우리가 만든 posts_home을 매핑하고 싶어
+- admin을 원하는 게 아니지 posts views를 쓰고 싶은거야
+- admin.site.urls를 지우고 posts.views.posts_home을 쓰자
+- 시도해볼게 무슨 일이 일어나는지 보자 저장하고 새로고침
+- post를 찾을 수가 없지 따옴표 붙이고나서 view이름을 제대로 바꿔보자
+- 다시 request를 보내면 hello가 나온다
+- 이거 세팅 겁나 간단하다
+- 다른 방법은 from posts import views하고 views.post_home으로 끝내는 거야
+- 난 funcion_based_view에서는 전자를 추천해
+- class_based_view에서는 조금 달라
+

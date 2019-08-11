@@ -307,3 +307,18 @@ admin.site.register에 추가
 - 난 funcion_based_view에서는 전자를 추천해
 - class_based_view에서는 조금 달라
 
+* * *
+## 13/38 In App URLs
+
+- 127.0.0.1:8000/admin/어저구저저구라고 치면 admin이랑 관련있는 모든 URL들이 출력돼
+- app은 모든 것을 통제해
+- post안에 새로운 파일을 만들어보자
+- url.py 내부내용들을 전부 복붙하고 admin은 더이상 필요없어서 지우고 달러 사인은 유지해
+- urls.py로 돌아가서 include를 import하 달러사인을 지워도 돼
+- posts에 접속해보면 다시 Hello를 볼 수 있고 url을 abc$로 바꾸고 새로고침하면 관련된 url로 볼 수 있어
+- 자 다시 우리의 view로 돌아가자
+- CRUD를 떠올리 detail, list, update, delete를 추가해 url에서도
+- 각 링크로 가보명 확인 할 수 있다
+- URLs가 어떻게 동작하는지 잘 봤다
+- 순서를 바꿔도 동일하다
+

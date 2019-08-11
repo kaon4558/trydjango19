@@ -322,3 +322,48 @@ admin.site.register에 추가
 - URLs가 어떻게 동작하는지 잘 봤다
 - 순서를 바꿔도 동일하다
 
+
+* * *
+## 14/38 Django Templates
+- 장고가 최고인 이유중 하나는 Templates를 사용한다는 거야 
+- 템플릿은 우리가 우리 웹페이지를 똑똑하게 만들게 도와주고 우리 코드를 효과적으로 만들어줘
+- 굉장히 깔끔하게 만들어줘
+- import os를 하면 path이슈를 해결해줘
+- src안에 Templates 폴더를 만들고 index.html을 만들어
+- 내용을 쓰고 우리 urls.py로 돌아가서 적어
+- template에도 링크를 바꾸면 TemplateDoesNotExist라는 에러메시지가 나와
+- 우리는 약간의 에러를 해결하고 다시 돌아가보면 template is working을 확인 할 수 있다 좋아
+
+
+* * *
+## 15/38 Template Context
+- 우린 이제 Template Context를 할거야
+- 저번에 render call을 할 때 빈 딕셔너리 기억나?
+- 난 좀 더 좋은 걸 알려주고 싶어 template context지
+- context를 추가하고 완료해
+- 어렵지 않지? 2개의 다른 context 를 추가해보
+- context를 추가해봤고 다른 링크에서도 확인 할 수 있어
+
+
+* * *
+## 16/38 QuerySet Basics
+- db애서 값을 정렬하는 걸 볼거야
+- python manage,py shell를 하면 이건 django project랑 관련된 쉘이 나와
+- 앱으로부터 이걸 import해야해
+- 장고 쉘을 열고 필터들이 잘 동작하는지 보자
+- create 명령어를 반복하면 다 db에 들어간다
+- queryset = Post.objeect.all()과 for문으로 전부 출력할 수 도 있어
+- django shell 나가고 런서버를 켜고 views에서 from .models import Post로 모델을 추가한 뒤에
+- post_list에 queryset = Post.objects.all()을 추가하고 context에도 추가해
+- template안에 object_list를 추가할 거야
+- 페이지에서 이 posts를 볼 수 았어
+- index.html도 수정하고 새로고침을 하면 우린 모든 데이터를 볼 수 있
+
+* * *
+## 17/38 Get Item or 404 Query
+
+
+
+
+
+

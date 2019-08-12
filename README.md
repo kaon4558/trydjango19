@@ -362,8 +362,14 @@ admin.site.register에 추가
 * * *
 ## 17/38 Get Item or 404 Query
 
-
-
+- 우리의 view에서 각각 아이템 하나씩을 볼 차례야
+- post_list를 본다면 각각 아이템을 볼 수 있지
+- get_object_or_404 라이브러리를 추가하고
+- get_object_or_404는 만약 값이 존재하지 않으면 404에러를 리턴해줘 id가 1이라고 친다면
+- post_detail.html을 만들고 index.html을 복사하고 나서 obj를 모두 instance로 바꾸자
+- Post는 모델이고 인스턴스로부터 바뀐다는 뜻이야
+- 돌려보면 어떻게 URL들이 쿼리들을 이렇게 바꾸는지 궁금하기를 바
+- 404에러를 어떻게 해결할지 보여줄게
 
 
 

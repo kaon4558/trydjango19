@@ -357,7 +357,7 @@ admin.site.register에 추가
 - post_list에 queryset = Post.objects.all()을 추가하고 context에도 추가해
 - template안에 object_list를 추가할 거야
 - 페이지에서 이 posts를 볼 수 았어
-- index.html도 수정하고 새로고침을 하면 우린 모든 데이터를 볼 수 있
+- index.html도 수정하고 새로고침을 하면 우린 모든 데이터를 볼 수 있어
 
 * * *
 ## 17/38 Get Item or 404 Query
@@ -368,8 +368,11 @@ admin.site.register에 추가
 - get_object_or_404는 만약 값이 존재하지 않으면 404에러를 리턴해줘 id가 1이라고 친다면
 - post_detail.html을 만들고 index.html을 복사하고 나서 obj를 모두 instance로 바꾸자
 - Post는 모델이고 인스턴스로부터 바뀐다는 뜻이야
-- 돌려보면 어떻게 URL들이 쿼리들을 이렇게 바꾸는지 궁금하기를 바
-- 404에러를 어떻게 해결할지 보여줄게
+- 돌려보면 어떻게 URL들이 쿼리들을 이렇게 바꾸는지 궁금하기를 바래
+- 에러를을 어떻게 해결할지 보여줄게
 
 
+* * *
+## Dynamic URL Routing & Patterns
+- 
 

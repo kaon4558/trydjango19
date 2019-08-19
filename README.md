@@ -373,6 +373,6 @@ admin.site.register에 추가
 
 
 * * *
-## Dynamic URL Routing & Patterns
+## 18/38 Dynamic URL Routing & Patterns
 - 
 
